@@ -1,0 +1,2 @@
+main: test.cpp iaeSys.lib iaemath.lib
+	mingw32-g++ -o test.exe iaeSys.lib iaemath.lib
