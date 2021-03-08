@@ -1,14 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Данный класс предназначен для кодирования/декодирования информации в/из BASE64
  */
 package l.language;
 
-/**
- *
- * @author днс
- */
 public class Base64 {
     private static final String codeVector="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
     private static final int mask1 = 0b111111;
@@ -19,7 +13,7 @@ public class Base64 {
     {
     }
     
-    public String toBase64(String message)
+    public static String toBase64(String message)
     {
         int len = message.length()/3;
         int zeroLen = message.length() - (len*3);
@@ -70,7 +64,7 @@ public class Base64 {
         return n.toString();
     }
     
-    public String toBase64(byte[] message)
+    public static String toBase64(byte[] message)
     {
         int len = message.length/3;
         int zeroLen = message.length- (len*3);
